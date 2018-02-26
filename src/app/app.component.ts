@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from './data.service';
+import {LabSixService} from './lab-six.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,11 +7,11 @@ import {DataService} from './data.service';
 })
 export class AppComponent {
   title = 'app';
-  constructor(private dataService: DataService){}
+  constructor(private dataService: LabSixService){}
   students: any = [];
 
   ngOnInit(){
-    this.dataService.GetStudentData().subcribe(data =>
+    this.dataService.GetStudentData().subscribe(data =>
     {
       this.students = data.students;
     });
