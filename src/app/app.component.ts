@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,3 @@ import { HttpClientModule } from '@angular/common/http';
 export class AppComponent {
   title = 'app';
 }
-@HttpClientModule({
-  imports: [ 
-    'BrowserModule',
-    'HttpClientModule'
-  ]
-)}
